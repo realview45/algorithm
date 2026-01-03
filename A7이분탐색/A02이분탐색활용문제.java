@@ -25,7 +25,6 @@ public class A02이분탐색활용문제 {
         }
         int m = Integer.parseInt(br.readLine());
         int answer =-1;
-
         while(start<=end){
             int mid = (start+end)/2;
             int sum=0;
@@ -63,6 +62,4 @@ public class A02이분탐색활용문제 {
 //        System.out.println(answer);
         System.out.println(answer);
     }
-
 }
-

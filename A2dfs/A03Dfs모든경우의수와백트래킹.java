@@ -44,6 +44,17 @@ public class A03Dfs모든경우의수와백트래킹 {
         }
     }
 
+    static void dfs2(int start, List<Integer> temp) {
+        temp.add(start);
+        if (adjList.get(start).isEmpty()) {
+            answer.add(new ArrayList<>(temp));
+            temp.remove(temp.size() - 1);
+        }
+        for (int target : adjList.get(start)) {
+            dfs(target, temp);
+        }
+        temp.remove(temp.size() - 1);
+    }
     // 관련문제(완전탐색 && 백트래킹) : 피로도 - 프로그래머스
     // https://school.programmers.co.kr/learn/courses/30/lessons/87946
 }
